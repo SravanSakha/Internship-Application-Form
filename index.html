@@ -91,9 +91,11 @@ Select current branch</select>
     const first_Name = document.getElementById("first_name").value.trim();
     const last_Name = document.getElementById("last_name").value.trim();
     const email = document.getElementById("email").value.trim();
+const num = document.getElementById("mobilenum");
     const cvFile = document.getElementById("CV").value;
     const branch = document.getElementById("branch").value;
 const mobile=document.getElementById("mobilenum").value;
+const check=num%10000000000;
     console.log(first_Name);
     console.log(last_Name);
     console.log(email);
@@ -111,6 +113,11 @@ console.log(mobile);
         alert("Please enter a valid email address.");
         return false;
     }
+if(check<6){
+alert("please enter valid mobile num.");
+return false;
+}
+
 
     if (!allowedExtensions.exec(cvFile)) {
         alert("Only PDF or DOC files are allowed.");
