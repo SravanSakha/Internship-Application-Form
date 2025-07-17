@@ -1,8 +1,6 @@
 # Internship-Application-Form
 
----
-
-#### This is my First Project in frontend web dovelopment using HTML,CSS and Vanilla JavaScript. 
+#### This is my First Project in frontend web dovelopment using **HTML,CSS and Vanilla JavaScript.** 
 ---
 
 ## The website link:
