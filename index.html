@@ -87,5 +87,39 @@ Select current branch</select>
 </div>
 <button type="submit">Apply Now</button>
 </form>
+<script>function validateForm() {
+    const first_Name = document.getElementById("first_name").value.trim();
+    const last_Name = document.getElementById("last_name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const cvFile = document.getElementById("CV").value;
+    const branch = document.getElementById("branch").value;
+const mobile=document.getElementById("mobilenum").value;
+    console.log(first_Name);
+    console.log(last_Name);
+    console.log(email);
+    console.log(branch);
+console.log(mobile);
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const allowedExtensions = /(\.pdf|\.doc|\.docx)$/i;
+
+    if (first_Name === "" || last_Name === "" || email === "" || cvFile === "" || mobile ==="") {
+        alert("Please fill all required fields.");
+        return false;
+    }
+
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+    }
+
+    if (!allowedExtensions.exec(cvFile)) {
+        alert("Only PDF or DOC files are allowed.");
+        return false;
+    }
+
+    alert("Form submitted successfully!");
+    alert('Thanks for submitting your application');
+    return true;
+}</script>
   </body>
 </html>
